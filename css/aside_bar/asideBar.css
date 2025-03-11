@@ -1,0 +1,76 @@
+.right-container {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  min-height: 100%;
+  background-color: #ECECEC;
+  box-shadow: -5px 0px 20px rgba(0,0,0,0.08);
+  z-index: 2;
+  overflow-y: scroll;
+}
+
+.content-column {
+  display: grid;
+  grid-row: 1;
+  grid-column: 3;
+  background-color: #E2E2E2;
+  align-items: center;
+  min-height: 100%;
+}
+
+.image-wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  background-color: white;
+}
+
+.svg-info-container {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.svg-info-container.selected-yellow {
+  background-color: #FFBC10; 
+  border: 4px solid #FFB100;
+}
+
+.svg-info-container.selected-yellow > .svg-info {
+  color: white;
+}
+
+.svg-info-container > .svg-info {
+  color: #FFBC10;
+}
+
+.svg-frame-container {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  cursor: pointer;
+}
+
+.svg-frame-container > .svg-frame {
+  color: #FF2424;
+}
+
+.svg-frame-container > .svg-frame > .svg-background-frame {
+  fill: white;
+}
+
+.svg-frame-container.selected-red > .svg-frame {
+  color: white;
+}
+
+.svg-frame-container.selected-red {
+  background-color: #FF2424;
+  border: 4px solid #C80000;
+}
+
+.svg-frame-container.selected-red > .svg-frame > .svg-background-frame {
+  fill: #FF2424;
+}
+
+.svg-model, .svg-info, .svg-frame {
+  transform-origin: center;
+}

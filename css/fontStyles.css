@@ -1,0 +1,34 @@
+.font1 {
+  font-family: "Roboto";
+  letter-spacing: -1px;
+}
+
+.font2 {
+  font-family: "Teko";
+  letter-spacing: 1px;
+}
+
+.font3 {
+  font-family: "Comfortaa";
+  letter-spacing: -2px;
+  font-stretch: condensed;
+}
+
+.font4 {
+  font-family: "Josefin Sans";
+  letter-spacing: -1px;
+}
+
+.font5 {
+  font-family: "Pridi";
+  letter-spacing: 1px;
+}
+
+.font6 {
+  font-family: "Taviraj";
+  letter-spacing: -1px;
+}
+
+.font7 {
+  font-family: "Chakra Petch";
+}

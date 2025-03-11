@@ -1,0 +1,407 @@
+/* Info Content Styling */
+
+.info-content {
+  max-height: 90vh;
+  margin: 0rem 0px 0px 1.25rem;
+}
+
+#location {
+  margin: 2rem 0 2rem 0;
+}
+
+.address-container {
+  position: relative;
+}
+
+.address-container > #address-button {
+  margin: 1rem 0 1rem 0;
+  border-color: #C7C7C7;
+  border-style: solid;
+  padding: 0.5rem;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7%;
+  margin-bottom: 0;
+}
+
+.address-container > #address-button:hover {
+  cursor: pointer;
+  transition: 0.25s all;
+}
+
+.address-container > .address-search-result {
+  display: none;
+  opacity: 0;
+  width: fit-content;
+  list-style-type: none;
+  max-width: 85%;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  padding: 7px 7px 0px;
+  margin: -1px 0 1rem 0;
+}
+
+.address-search-result > ul {
+  font-size: 14px;
+  margin: 7px 0 14px 0;
+  padding-left: 0;
+}
+
+.address-search-result > ul:hover {
+  cursor: pointer;
+  color: #FF8A00;
+}
+
+#detail-visuals {
+  margin: 1rem 0 1rem 0;
+}
+
+.detail-wrapper {
+  container: detail-options-container / inline-size;
+}
+
+.detail-options {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  column-gap: 1.2rem;
+  row-gap: 0.5rem;
+}
+
+.detail-options > .option {
+  display: grid;
+  grid-template-rows: 80px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  width: 80px;
+  height: 80px;
+  background-color: #D9D9D9;
+  border-radius: 1.25rem;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+}
+
+.detail-options > .option > p {
+  justify-self: center;
+  align-self: center;
+  grid-row: 2;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+#constellation {
+  background-image: url("/assets/info_content/constellation.png");
+}
+
+#gridlines {
+  background-image: url("/assets/info_content/world-grid.png");
+}
+
+#planets {
+  background-image: url("/assets/info_content/planets.png");
+}
+
+#galaxy {
+  background-image: url("/assets/info_content/galaxy.png");
+}
+
+.name-options {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 0 0.4rem;
+}
+
+#color-title {
+  margin: 2rem 0 1rem 0;
+}
+
+.frame-color-wrapper {
+  margin-bottom: 1.75rem;
+}
+
+.frame-color-options {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.frame-color-options > div {
+  width: 80px;
+  height: 80px;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+
+#frame-color-black {
+  background-color: black;
+}
+
+#frame-color-white {
+  background-color: white;
+}
+
+#frame-color-title, #frame-summary-title {
+  margin: 2rem 0 1rem 0;
+}
+
+.color-container {
+  container: color-container / inline-size;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#color-range-input {
+  width: 300px;
+}
+
+#color-title-bg {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+#color-title-detail {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+
+.bg-color-pallete, .detail-color-pallete {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: 65px 65px;
+  align-items: center;
+  column-gap: 1rem;
+  height: fit-content;
+}
+
+.bg-color-pallete > span, .detail-color-pallete > span, .bg-star-color-container > span {
+  width: 45px;
+  height: 45px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.choose-color {
+  position: relative;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #C7C7C7;
+}
+
+#bg-star-color-title {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.color-container > .bg-star-color-wrapper {
+  grid-column: 1 / -1;
+}
+
+.color-container > .bg-star-color-wrapper > p {
+  font-style: italic;
+  color: #757575;
+}
+
+.bg-star-color-wrapper > .bg-star-color-container {
+  display: grid;
+  grid-template-columns: repeat(4, 50px) auto;
+  align-items: center;
+  column-gap: 1.1rem;
+  row-gap: 1.1rem;
+}
+
+.plus-container {
+  position: absolute;
+  left: 18px;
+  top: 13px;
+}
+
+.plus {
+  position: relative;
+  width: 5px;
+  height: 15px;
+  background: #C7C7C7;
+  z-index: 1;
+}
+
+.plus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateX(-35%) translateY(-50%) rotate(180deg);
+  left: 0;
+  width: 15px;
+  height: 5px;
+  background: #C7C7C7;
+  z-index: 1;
+}
+
+#text-title, #font-title {
+  margin: 1rem 0 0 0;
+}
+
+#model1-title, #model1-description {
+  overflow-x: hidden;
+}
+
+.title-input-wrapper, .description-input-wrapper {
+  container: input-wrappers / inline-size;
+}
+
+#text-input-title, #description-title {
+  margin: 1rem 0 1rem 0;
+}
+
+.title-input-container, .description-input-container {
+  display: flex;
+  column-gap: 2.75rem;
+  align-items: center;
+}
+
+#title-input, #description-input {
+  width: 50%;
+}
+
+.font-options-wrapper {
+  container: font-container / inline-size;
+}
+
+.font-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.font-options > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  background-color: #D9D9D9;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  margin: 2rem 0 2rem 0;
+  font-size: 1.3rem;
+}
+
+.goto-frame-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#goto-frame-button {
+  font-family: "Roboto";
+  font-weight: bolder;
+  background-color: #FF2424;
+  color: white;
+  border: none;
+  margin: 0 1rem 1rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+#goto-frame-button:hover {
+  cursor: pointer;
+  transition: all 0.25s;
+  background-color: hsl(0, 100%, 62%);
+}
+
+/* Right Content Frame Styling */
+
+.frame-content {
+  height: 100vh;
+}
+
+.frame-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0px 0px 1.25rem;
+  height: calc(100vh - 66px);
+}
+
+#size-title {
+  margin: 0px 0px 2rem 0px;
+}
+
+.frame-sizes {
+  container: frame-wrapper / inline-size;
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.frame-sizes > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 2rem;
+  border: 0.5rem solid black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.frame-sizes > #frame-A2 {
+  width: 4.5cm;
+  height: 6.3cm;
+}
+
+.frame-sizes > #frame-A3 {
+  width: 3.3cm;
+  height: 4.5cm;
+}
+
+.frame-sizes > #frame-A4 {
+  width: 2.4cm;
+  height: 3.3cm;
+}
+
+.frame-sizes > #frame-A5 {
+  width: 1.8cm;
+  height: 2.4cm;
+}
+
+.price-wrapper {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  padding: 1rem 0 1rem 0;
+  flex-grow: 1;
+}
+
+.price-wrapper p {
+  display: inline;
+}
+
+.price-wrapper > #price-tag > span {
+  color: #FF8A00;
+  margin-left: 10px;
+}
+
+#checkout-button {
+  font-weight: bolder;
+  font-size: 1.5em;
+  padding: 1rem 1rem 1rem 1rem;
+  color: white;
+  cursor: pointer;
+  height: fit-content;
+  background-color: #FF8A00;
+  border: 2px solid #E87D00;
+}
+
+#checkout-button > p {
+  text-align: right;
+  margin: 0;
+}
+
+#checkout-button > p::before {
+  content: url("/assets/frame_content/shopping-cart.svg");
+  margin-right: 12px;
+}

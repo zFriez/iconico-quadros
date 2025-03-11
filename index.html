@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/utils.css">
+  <link rel="stylesheet" href="./css/keyframes.css">
+  <link rel="stylesheet" href="./css/fontStyles.css">
+  <link rel="stylesheet" href="./css/aside_bar/asideBar.css">
+  <link rel="stylesheet" href="./css/aside_content/contentStyle.css">
+  <link rel="stylesheet" href="./css/left_container/modelDetails.css">
+  <link rel="stylesheet" href="./css/left_container/paintingDetail.css">
+  <link rel="stylesheet" href="./css/aside_content/contentStyleMobile.css">
+  <link rel="stylesheet" href="./css/mediaQueries.css">
+  <script defer src="/VirtualSky/stuquery.min.js"></script>
+  <script defer src="/VirtualSky/virtualsky.min.js"></script>
+  <script defer src="./js/utils.js"></script>
+  <script defer src="./js/interaction.js"></script>  
+  <script defer src="./js/virtualsky.js"></script>  
+  <script defer src="./js/aside.js"></script>  
+  <title>Icônico Quadros</title>
+</head>
+<body>
+  <div class="custom-container">
+
+    <div class="left-container">
+      <img class="left-container-details" src="./assets/left_container/blue-detail.png">
+      <img class="left-container-details" src="./assets/left_container/red-detail.png">
+      <img class="left-container-details" src="./assets/left_container/yellow-detail.png">
+
+      <img id="logo" src="./assets/left_container/logo.png" alt="logo">
+      
+      <main class="frame-customize-container">
+        <img class="frame-image" src="./assets/left_container/black-frame.png" alt="moldura do quadro">
+        <div class="frame-background">
+          <div class="layout" id="layout-model1">
+            <div id="starmap-container">
+              <div id="starmap-container_element"></div>
+            </div>
+            <h1 id="model1-title">Título aqui</h1>
+            <p id="model1-description">Descrição aqui</p>
+            <div class="starmap-info-wrapper">
+              <p id="model1-place">Local, Latitude e Longitude</p>
+              <p id="model1-geolocation"></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="right-container">
+
+      <div class="info-content" style="display: block;">
+        <h1 id="location">Mapa das estrelas</h1>
+
+        <h2>Endereços</h2>
+        <div class="address-container">
+          <button id="address-button">Lista de endereços</button>
+          <li class="address-search-result">
+            <ul>Rio de Janeiro, Rio de Janeiro, Brazil</ul>
+            <ul>São Paulo, São Paulo, Brazil</ul>
+            <ul>Recife, Pernambuco, Brazil</ul>
+            <ul>Florianópolis, Santa Catarina, Brazil</ul>
+            <ul>Moscow, Moscow, Russia</ul>
+            <ul>Beijing, Beijing, China</ul>
+            <ul>Berlim, Germany, Germany</ul>
+            <ul>New York, New York, United States</ul>
+            <ul>San José, San José, Costa Rica</ul>
+          </li>
+        </div>
+
+        <div class="detail-wrapper">
+          <h2 id="detail-visuals">Visuais</h2>
+          <div class="detail-options">
+            <div class="option" id="constellation">
+              <p>Constelações</p>
+            </div>
+            <div class="option" id="planets">
+              <p>Planetas</p>
+            </div>
+            <div class="option" id="gridlines">
+              <p>Globo</p>
+            </div>
+            <div class="option" id="galaxy">
+              <p>Galáxia</p>
+            </div>
+          </div> 
+        </div>
+    
+        <div class="name-options">
+          <input type="checkbox" id="constellation-names" disabled>
+          <label for="constellation-names">Nome das Constelações</label>
+          <input type="checkbox" id="planet-names" disabled>
+          <label for="planet-names">Nome dos Planetas</label>
+        </div>
+
+        <h1 id="color-title">Cores</h1>
+
+        <div class="frame-color-wrapper">
+          <h2 id="frame-color-title">Cor da moldura</h2>
+          <div class="frame-color-options">
+            <div class="checked" id="frame-color-black"></div>
+            <div id="frame-color-white"></div>
+          </div>
+        </div>
+
+        <div class="color-container">
+
+          <div class="bg-color-wrapper">            
+            <h2 id="color-title-bg">Fundo</h2>
+            <div class="bg-color-pallete">
+              <span id="bg-color-pallete1" style="background-color: black;"></span>
+              <span id="bg-color-pallete2" style="background-color: #878787;"></span>
+              <span id="bg-color-pallete3" class="checked" style="background-color: #C7C7C7;"></span>
+              <span id="bg-color-pallete4" style="background-color: white;"></span>
+              <span id="bg-color-pallete5" style="background-color: #2474FF;"></span>
+              <span id="bg-color-pallete6" style="background-color: #FF2424;"></span>
+              <span id="bg-color-pallete7" style="background-color: #FFB100;"></span>
+  
+              <div class="choose-color">
+                <div class="plus-container">
+                  <div class="plus"></div>
+                </div>
+                <input class="user-color" type="color" value="#D9D9D9">
+              </div>
+  
+            </div>
+          </div>
+
+          <div class="detail-color-wrapper">
+            <h2 id="color-title-detail">Detalhes</h2>
+            <div class="detail-color-pallete">
+              <span class="checked" id="detail-color-pallete1" style="background-color: black;"></span>
+              <span id="detail-color-pallete2" style="background-color: #878787;"></span>
+              <span id="detail-color-pallete3" style="background-color: #C7C7C7;"></span>
+              <span id="detail-color-pallete4" style="background-color: white;"></span>
+              <span id="detail-color-pallete5" style="background-color: #2474FF;"></span>
+              <span id="detail-color-pallete6" style="background-color: #FF2424;"></span>
+              <span id="detail-color-pallete7" style="background-color: #FFB100;"></span>
+  
+              <div class="choose-color">
+                <div class="plus-container">
+                  <div class="plus"></div>
+                </div>
+                <input class="user-color" type="color" value="#D9D9D9">
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-star-color-wrapper">            
+            <h2 id="bg-star-color-title">Céu</h2>
+            <div class="bg-star-color-container">
+              <span id="bg-star-color-pallete1" class="checked" style="background: blue;"></span>
+              <input type="range" id="color-range-input" min="0" max="360" value="0">
+            </div>
+            <p>
+              Atenção: A cor escolhida pode variar em pequenos tons devido à tela do seu aparelho ou tinta de impressão. Contamos com sua compreensão.
+            </p>
+          </div>
+        </div>
+
+        <h1 id="text-title">Textos</h1>
+
+        <div class="title-input-wrapper">
+          <h2 id="text-input-title">Título</h2>
+          <div class="title-input-container">
+            <input type="text" id="title-input" maxlength="50">
+            <div id="title-size">
+              <input id="title-font-size" type="range" min="-8" max="8" value="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="description-input-wrapper">
+          <h2 id="description-title">Descrição</h2>
+          <div class="description-input-container">
+            <input type="text" id="description-input" maxlength="115">
+            <div id="description-size">
+              <input id="description-font-size" type="range" min="-4" max="4" value="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="font-options-wrapper">
+          <h1 id="font-title">Fonte</h1>
+          <div class="font-options">
+            <div class="checked font1" style="font-family: 'Roboto'">Aa</div>
+            <div class="font2" style="font-family: 'Teko'">Aa</div>
+            <div class="font3" style="font-family: 'Comfortaa'">Aa</div>
+            <div class="font4" style="font-family: 'Josefin Sans'">Aa</div>
+            <div class="font5" style="font-family: 'Pridi'">Aa</div>
+            <div class="font6" style="font-family: 'Taviraj'">Aa</div>
+            <div class="font7" style="font-family: 'Chakra Petch'">Aa</div>
+          </div>
+        </div>
+
+        <div class="goto-frame-wrapper">
+          <button id="goto-frame-button">Próxima etapa</button>
+        </div>
+
+      </div>
+
+      <div class="frame-content" style="display: none;">
+
+        <div class="frame-content-wrapper">
+          <div class="frame-wrapper">
+            <h1 id="size-title">Tamanho</h1>
+            <div class="frame-sizes">
+              <div id="frame-A2">A2</div>
+              <div id="frame-A3">A3</div>
+              <div class="selected" id="frame-A4">A4</div>
+              <div id="frame-A5">A5</div>
+            </div>
+          </div>
+
+          <div class="frame-summary-wrapper">
+            <h1 id="frame-summary-title">Resumo</h1>
+            <p id="frame-sumamry-text">1x Quadro Decorativa Star Map Modelo 01 A4</p>
+          </div>
+  
+          <div class="price-wrapper">
+            <div id="price-tag"><p>Total:</p><span>R$ 77,90</span></div>
+          </div>
+
+        </div>
+
+        <div id="checkout-button">
+          <p>Finalizar</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-column">
+      <div class="image-wrapper">
+        <div class="svg-info-container">
+          <svg class="svg-info" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" height="50" viewBox="0 0 512 512" xml:space="preserve">
+            <path fill="currentColor" opacity="1.000000" stroke="none" 
+              d="
+            M513.000000,86.531731 
+              C508.341187,105.260544 493.682007,116.175919 481.654755,128.805679 
+              C418.016693,195.631729 354.071716,262.165527 290.244354,328.811310 
+              C284.521881,334.786499 278.879547,340.838409 272.327545,347.778839 
+              C265.927704,330.145935 257.346985,315.146606 244.761337,302.665802 
+              C232.194366,290.203461 217.200760,281.938812 200.435379,277.162201 
+              C200.389709,274.206818 202.362549,273.196167 203.735245,271.881989 
+              C280.501312,198.388901 357.291168,124.920677 434.084473,51.456074 
+              C440.982574,44.857002 448.204712,38.863815 457.687225,36.088154 
+              C479.545898,29.689835 502.933258,41.398876 510.717743,62.858757 
+              C511.281769,64.413635 511.930695,65.937714 512.770081,67.738060 
+              C513.000000,74.021156 513.000000,80.042305 513.000000,86.531731 
+            z"/>
+            <path fill="currentColor" opacity="1.000000" stroke="none" 
+              d="
+            M1.000000,417.399994 
+              C24.738947,410.711304 47.222424,401.865845 65.490784,384.707031 
+              C76.166473,374.679688 83.763542,362.246613 91.420822,349.975861 
+              C107.034081,324.955597 129.120285,309.642365 158.064316,304.207458 
+              C201.171036,296.113220 237.247284,322.032166 246.335770,363.869049 
+              C255.997101,408.342834 231.509735,444.684662 195.522385,462.892212 
+              C173.315079,474.127869 149.579437,479.002502 124.747597,479.450073 
+              C94.868103,479.988678 66.644661,473.715668 40.193081,459.831543 
+              C23.403385,451.018799 10.120005,438.536987 1.271956,421.197144 
+              C1.000000,419.933319 1.000000,418.866669 1.000000,417.399994 
+            z"/>
+          </svg>
+        </div>
+        <div class="svg-frame-container">
+          <svg class="svg-frame" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="50" height="50" viewBox="0 0 512 512" xml:space="preserve">
+            <path fill="currentColor" opacity="1.000000" stroke="none" 
+              d="
+            M463.000000,513.000000 
+              C325.976685,513.000000 188.953354,513.000000 51.320595,512.683960 
+              C42.781418,509.041870 40.002449,504.753174 40.002266,495.744598 
+              C39.999062,337.339539 40.048561,178.934402 39.874466,20.529526 
+              C39.864433,11.401812 42.522820,4.800253 51.000000,1.000000 
+              C188.023331,1.000000 325.046661,1.000000 462.684875,1.315832 
+              C471.225372,4.967737 473.997559,9.253526 473.997742,18.265656 
+              C474.000854,176.668823 473.951233,335.072052 474.126007,493.475006 
+              C474.136078,502.603882 471.461487,509.193054 463.000000,513.000000 
+            M292.500000,31.000053 
+              C218.411377,31.000053 144.322739,31.000053 70.291962,31.000053 
+              C70.291962,181.978500 70.291962,332.370331 70.291962,482.706726 
+              C194.977722,482.706726 319.371368,482.706726 443.708008,482.706726 
+              C443.708008,332.021393 443.708008,181.629578 443.708008,31.000053 
+              C393.444275,31.000053 343.472137,31.000053 292.500000,31.000053 
+            z"/>
+            <path class="svg-background-frame" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+              d="
+            M463.468658,513.000000 
+              C471.461487,509.193054 474.136078,502.603882 474.126007,493.475006 
+              C473.951233,335.072052 474.000854,176.668823 473.997742,18.265656 
+              C473.997559,9.253526 471.225372,4.967737 463.149872,1.315832 
+              C479.654755,1.000000 496.309479,1.000000 512.957642,1.000002 
+              C512.951111,171.666672 512.951111,342.333344 512.951111,513.000000 
+              C496.580597,513.000000 480.258942,513.000000 463.468658,513.000000 
+            z"/>
+            <path class="svg-background-frame" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+              d="
+            M50.531342,1.000000 
+              C42.522820,4.800253 39.864433,11.401812 39.874466,20.529526 
+              C40.048561,178.934402 39.999062,337.339539 40.002266,495.744598 
+              C40.002449,504.753174 42.781418,509.041870 50.855583,512.683960 
+              C34.345253,513.000000 17.690508,513.000000 1.042299,513.000000 
+              C1.048834,342.333313 1.048834,171.666656 1.048834,1.000000 
+              C17.419340,1.000000 33.741013,1.000000 50.531342,1.000000 
+            z"/>
+            <path class="svg-background-frame" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+              d="
+            M293.000000,31.000053 
+              C343.472137,31.000053 393.444275,31.000053 443.708008,31.000053 
+              C443.708008,181.629578 443.708008,332.021393 443.708008,482.706726 
+              C319.371368,482.706726 194.977722,482.706726 70.291962,482.706726 
+              C70.291962,332.370331 70.291962,181.978500 70.291962,31.000053 
+              C144.322739,31.000053 218.411377,31.000053 293.000000,31.000053 
+            M230.500000,63.999950 
+              C193.338089,63.999950 156.176178,63.998337 119.014275,64.000847 
+              C106.508759,64.001694 101.001335,69.471535 101.001129,81.900131 
+              C100.999153,198.718536 100.998848,315.536926 101.001617,432.355347 
+              C101.001900,444.415985 106.624664,449.998108 118.769775,449.998474 
+              C210.924667,450.001282 303.079559,450.001099 395.234436,449.998627 
+              C407.385834,449.998291 412.997803,444.426147 412.998108,432.349365 
+              C413.001251,315.364319 413.001587,198.379257 412.997589,81.394211 
+              C412.997192,69.663429 407.294312,64.003456 395.479034,64.002304 
+              C340.819366,63.996979 286.159668,63.999950 230.500000,63.999950 
+            z"/>
+            <path fill="currentColor" opacity="1.000000" stroke="none" 
+              d="
+            M231.000000,63.999950 
+              C286.159668,63.999950 340.819366,63.996979 395.479034,64.002304 
+              C407.294312,64.003456 412.997192,69.663429 412.997589,81.394211 
+              C413.001587,198.379257 413.001251,315.364319 412.998108,432.349365 
+              C412.997803,444.426147 407.385834,449.998291 395.234436,449.998627 
+              C303.079559,450.001099 210.924667,450.001282 118.769775,449.998474 
+              C106.624664,449.998108 101.001900,444.415985 101.001617,432.355347 
+              C100.998848,315.536926 100.999153,198.718536 101.001129,81.900131 
+              C101.001335,69.471535 106.508759,64.001694 119.014275,64.000847 
+              C156.176178,63.998337 193.338089,63.999950 231.000000,63.999950 
+            M382.999908,365.500000 
+              C382.999908,275.081879 382.999908,184.663727 382.999908,94.289597 
+              C298.696930,94.289597 214.969681,94.289597 131.287750,94.289597 
+              C131.287750,202.970764 131.287750,311.362213 131.287750,419.710449 
+              C215.302948,419.710449 299.030212,419.710449 382.999908,419.710449 
+              C382.999908,401.781403 382.999908,384.140717 382.999908,365.500000 
+            z"/>
+            <path class="svg-background-frame" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+              d="
+            M382.999908,366.000000 
+              C382.999908,384.140717 382.999908,401.781403 382.999908,419.710449 
+              C299.030212,419.710449 215.302948,419.710449 131.287750,419.710449 
+              C131.287750,311.362213 131.287750,202.970764 131.287750,94.289597 
+              C214.969681,94.289597 298.696930,94.289597 382.999908,94.289597 
+              C382.999908,184.663727 382.999908,275.081879 382.999908,366.000000 
+            z"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+      
+  </div>
+
+</body>
+</html>

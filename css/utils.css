@@ -1,0 +1,22 @@
+.checked {
+  animation: borderPop 300ms forwards;
+  outline: 4px solid #FF8A00;
+}
+
+.selected {
+  border-color: #FF8A00 !important;
+  color: #FF8A00;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.fade-out {
+  animation: fadeOut 300ms forwards;
+}
+
+.fade-in {
+  animation: fadeIn 300ms forwards;
+}
+
+.drop-down {
+  animation: dropDown 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94) forwards;
+}
