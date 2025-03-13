@@ -91,19 +91,19 @@
 }
 
 #constellation {
-  background-image: url("/assets/info_content/constellation.png");
+  background-image: url("/iconico-quadros/assets/info_content/constellation.png");
 }
 
 #gridlines {
-  background-image: url("/assets/info_content/world-grid.png");
+  background-image: url("/iconico-quadros/assets/info_content/world-grid.png");
 }
 
 #planets {
-  background-image: url("/assets/info_content/planets.png");
+  background-image: url("/iconico-quadros/assets/info_content/planets.png");
 }
 
 #galaxy {
-  background-image: url("/assets/info_content/galaxy.png");
+  background-image: url("/iconico-quadros/assets/info_content/galaxy.png");
 }
 
 .name-options {
