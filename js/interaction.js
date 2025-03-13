@@ -188,7 +188,6 @@ function infoContentInteraction() {
   })
 
   address_button.addEventListener("click", () => {
-    console.log(address_button.nextElementSibling)
     address_button.nextElementSibling.style.display = "block"
     address_button.nextElementSibling.classList.add("drop-down")
   })
